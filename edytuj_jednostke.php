@@ -14,7 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "UPDATE jednostki SET nazwa='$nazwa', rodzaj='$rodzaj', stan_gotowosci='$stan', lokalizacja='$lokalizacja', wyposazenie='$wyposazenie', liczba_personelu='$personel' WHERE jednostkaID='$id'";
+    $sql = "UPDATE jednostki SET nazwa='$nazwa', rodzaj='$rodzaj', 
+    stan_gotowosci='$stan', lokalizacja='$lokalizacja', 
+    wyposazenie='$wyposazenie', liczba_personelu='$personel' 
+    WHERE jednostkaID='$id'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Jednostka zaktualizowana pomyślnie";

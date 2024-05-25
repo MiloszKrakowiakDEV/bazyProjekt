@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3411/3411458.png">
 </head>
 <body>  
-
+    <div id = "jednostki_body"></div>
     <div class="container">
         
         <h1>Jednostki Wojskowe</h1>
@@ -71,7 +71,7 @@
         <form action="monitoruj_jednostki.php" method="get" class="full-width">
             <h2>Monitoruj Jednostki</h2>
             <label>ID Jednostki:</label>
-            <input type="number" name="id_jednostki">
+            <input type="number" name="id">
             <input type="submit" value="Monitoruj">
         </form>
     </div>

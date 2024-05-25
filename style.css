@@ -8,6 +8,26 @@ body {
     align-items: flex-start;
     height: 100vh;
     overflow-y: auto;
+    
+}
+
+#jednostki_body {
+    background-image: url('https://wallpapercave.com/wp/VKSFykv.jpg');
+    background-repeat: repeat-y;
+    height: 165%;
+    width: 100%;
+    filter: blur(5px);
+    position: center;
+    overflow: auto;
+}
+#misje_body {
+    background-image: url('https://www.wilpf.org/wp-content/uploads/2022/01/joel-rivera-camacho-0fPujIGNjL8-unsplash-scaled.jpg');
+    background-repeat: repeat-y;
+    height: 165%;
+    width: 100%;
+    filter: blur(5px);
+    position: center;
+    overflow: auto;
 }
 .container {
     max-width: 1200px;
@@ -19,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
 }
 h1 {
     text-align: center;

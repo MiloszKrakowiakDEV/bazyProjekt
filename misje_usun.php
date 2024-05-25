@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $jednostka_id = $_POST['id_jednostki'];
-    $misja_id = $_POST['id_misji'];
+    $id = $_POST['id_misji'];
 
     $conn = new mysqli("localhost", "root", "", "bazyprojekt");
 
@@ -9,15 +8,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO zadania (jednostka_id, misja_id) VALUES ('$jednostka_id', '$misja_id')";
+    $sql = "DELETE FROM misje WHERE id='$id'";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Jednostka została przydzielona do misji pomyślnie";
+        echo "Jednostka usunięta pomyślnie";
     } else {
         echo "Błąd: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
-    header( 'Location: zadania_wypisz.php' );
+    header( 'Location: misje_wypisz.php' );
 }
 ?>
