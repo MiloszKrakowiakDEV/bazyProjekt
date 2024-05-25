@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zasoby Wojskowe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3411/3411458.png">
+</head>
+<body>  
+    <div id = "zasoby_body"></div>
+    <div class="container">
+        
+        <h1>Zasoby Wojskowe</h1>
+        <p id="powrot"><a href="index.html">POWRÓT</a></p>
+        <p id="powrot"><a href="zasoby_wypisz.php">LISTA ZASOBÓW</a></p>
+        <div class="forms-row">
+            <form action="zasoby_dodaj.php" method="post">
+                <h2>Dodaj Zasobę:</h2>
+                <label>ID Jednostki:</label>
+                <input type="text" name="jednostka_id">
+                <label>Nazwa Jednostki:</label>
+                <input type="text" name="jednostka_nazwa">
+                <label>Broń</label>
+                <input type="text" name="bron">
+                <label>Amunicja</label>
+                <input type="text" name="amunicja">
+                <label>Paliwo</label>
+                <input type="text" name="paliwo">
+                <label>Medykamenty</label>
+                <input type="text" name="meds">
+                <label>Sprzęt Logiczny</label>
+                <input type="text" name="sprz_logi">
+                <input type="submit" value="Edytuj">
+            </form>
+            
+            <form action="zasoby_edytuj.php" method="post">
+                <h2>Edytuj Zasobę:</h2>
+                <label>ID Jednostki:</label>
+                <input type="text" name="jednostka_id">
+                <label>Nazwa Jednostki:</label>
+                <input type="text" name="jednostka_nazwa">
+                <label>Broń</label>
+                <input type="text" name="bron">
+                <label>Amunicja</label>
+                <input type="text" name="amunicja">
+                <label>Paliwo</label>
+                <input type="text" name="paliwo">
+                <label>Medykamenty</label>
+                <input type="text" name="meds">
+                <label>Sprzęt Logiczny</label>
+                <input type="text" name="sprz_logi">
+                <input type="submit" value="Edytuj">
+            </form>
+        </div>
+        
+        <div class="forms-row">
+            <form action="zasoby_usun.php" method="post">
+                <h2>Usuń Zasobę</h2>
+                <label>ID:</label>
+                <input type="number" name="id">
+                <input type="submit" value="Usuń">
+            </form>
+            
+            <form action="przydziel_misje.php" method="post">
+                <h2>-</h2>
+                <label>-</label>
+                <input type="number" name="id_jednostki">
+                <label>-</label>
+                <input type="number" name="id_misji">
+                <input type="submit" value="Przydziel">
+            </form>
+        </div>
+        
+        <form action="zasoby_monitoruj.php" method="get" class="full-width">
+            <h2>Monitoruj Zasoby</h2>
+            <label>ID:</label>
+            <input type="number" name="id">
+            <input type="submit" value="Monitoruj">
+        </form>
+    </div>
+</body>
+</html>
