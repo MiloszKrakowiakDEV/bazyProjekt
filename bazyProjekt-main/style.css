@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    
+}
+
+#jednostki_body {
+    background-image: url('https://images.unsplash.com/photo-1620057285999-c0fb5f8161ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    height: 165%;
+    width: 100%;
+    filter: blur(5px);
+    position: center;
+    overflow: auto;
+    
+}/* https://wallpapercave.com/wp/VKSFykv.jpg */
+#misje_body {
+    background-image: url('https://www.wilpf.org/wp-content/uploads/2022/01/joel-rivera-camacho-0fPujIGNjL8-unsplash-scaled.jpg');
+    background-repeat: no-repeat;
+    height: 165%;
+    width: 100%;
+    filter: blur(5px);
+    position: center;
+    overflow: auto;
+}
+
+#zasoby_body {
+    background-image: url('https://plus.unsplash.com/premium_photo-1661964074409-dfa736a88357?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    height: 165%;
+    width: 100%;
+    filter: blur(5px);
+    position: center;
+    overflow: auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    width: 100%;
+    background-color: #5ddd63;
+}
+
+
+
+.forms-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Two forms per row with margin */
+    box-sizing: border-box;
+}
+
+form.full-width {
+    width: calc(100% - 40px); /* Full width form with margin */
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+p a{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #4CAF50;
+    text-decoration: none;
+    color: white;
+    border: 2px #d0cfcf solid;
+    padding: 10px;
+    width: 500px;
+}
