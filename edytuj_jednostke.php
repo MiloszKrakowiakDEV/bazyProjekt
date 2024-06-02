@@ -1,12 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3411/3411458.png">
+<title>Edytuj jednostkę</title>
+</head>
+<body>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id_jednostki'];
-    $nazwa = $_POST['nazwa_jednostki'];
-    $rodzaj = $_POST['rodzaj_jednostki'];
-    $stan = $_POST['stan_gotowosci'];
+
+    $id = $_POST['id'];
+    $nazwa = $_POST['nazwa'];
+    $rodzaj = $_POST['rodzaj'];
+    $stan = $_POST['stan'];
     $lokalizacja = $_POST['lokalizacja'];
     $wyposazenie = $_POST['wyposazenie'];
-    $personel = $_POST['liczba_personelu'];
+    $personel = $_POST['personel'];
 
     $conn = new mysqli("localhost", "root", "", "bazyprojekt");
 
@@ -14,7 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "UPDATE jednostki SET nazwa='$nazwa', rodzaj='$rodzaj', stan_gotowosci='$stan', lokalizacja='$lokalizacja', wyposazenie='$wyposazenie', liczba_personelu='$personel' WHERE jednostkaID='$id'";
+    $sql = "UPDATE jednostki SET nazwa='$nazwa', rodzaj='$rodzaj', 
+    stan_gotowosci='$stan', lokalizacja='$lokalizacja', 
+    wyposazenie='$wyposazenie', liczba_personelu='$personel' 
+    WHERE jednostkaID='$id'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Jednostka zaktualizowana pomyślnie";
@@ -24,5 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn->close();
     header( 'Location: wypiszJednostki.php' );
-}
+
 ?>
+</body>
+</html>

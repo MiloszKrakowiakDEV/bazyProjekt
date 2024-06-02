@@ -8,7 +8,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "DELETE FROM jednostki WHERE jednostkaID='$id'";
+    $sql = "DELETE FROM dane_wywiadowcze WHERE id='$id'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Jednostka usunięta pomyślnie";
@@ -17,6 +17,6 @@
     }
 
     $conn->close();
-    header( 'Location: wypiszJednostki.php' );
+    header( 'Location: analiza_wypisz.php' );
 
 ?>

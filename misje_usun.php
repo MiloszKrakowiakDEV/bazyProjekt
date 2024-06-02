@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <?php
 
     $id = $_GET['id'];
@@ -8,7 +16,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "DELETE FROM jednostki WHERE jednostkaID='$id'";
+    $sql = "DELETE FROM misje WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Jednostka usunięta pomyślnie";
@@ -16,7 +24,10 @@
         echo "Błąd: " . $sql . "<br>" . $conn->error;
     }
 
+    
+    header( 'Location: misje_wypisz.php' );
     $conn->close();
-    header( 'Location: wypiszJednostki.php' );
 
 ?>
+</body>
+</html>
